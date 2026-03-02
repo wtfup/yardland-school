@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yardland International School | Chitrakoot | Best English Medium School</title>
+    <meta name="description" content="Yardland International School - First English Medium School in Chitrakoot. Quality education for children with modern facilities. Admissions Open!">
+    <meta name="keywords" content="Yardland School, Chitrakoot School, English Medium School, Best School Chitrakoot, MP Board School">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #c62828 0%, #8e0000 100%);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd54f;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd54f;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/building-playground.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 100px 20px 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-content .established {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            background: rgba(255,215,0,0.9);
+            color: #333;
+            display: inline-block;
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #c62828;
+            color: white;
+            border: 2px solid #c62828;
+        }
+
+        .btn-primary:hover {
+            background: #8e0000;
+            border-color: #8e0000;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #c62828;
+        }
+
+        /* Sections Common */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #c62828;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: #f9f9f9;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            color: #c62828;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-item i {
+            color: #4caf50;
+            font-size: 1.2rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #c62828 0%, #8e0000 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffd54f;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        /* Facilities Section */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .facility-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .facility-card i {
+            font-size: 3rem;
+            color: #c62828;
+            margin-bottom: 20px;
+        }
+
+        .facility-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .facility-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: #f9f9f9;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Why Choose Us */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .why-card i {
+            font-size: 2.5rem;
+            color: #c62828;
+        }
+
+        .why-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .why-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #aaa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #ffd54f;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,213,79,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p, .contact-item a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #ffd54f;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Admission CTA */
+        .admission-cta {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .admission-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .admission-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .admission-cta .btn {
+            background: white;
+            color: #2e7d32;
+        }
+
+        .admission-cta .btn:hover {
+            background: #ffd54f;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d0d0d;
+            color: #aaa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        footer .social-links a {
+            color: #aaa;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #ffd54f;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Yard<span>land</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="established">🏫 Established 2016</div>
+            <h1>Yardland International School</h1>
+            <p class="tagline">मजबूत नींव के लिए | A Great Place For Education</p>
+            <p class="tagline" style="font-size: 1.1rem; margin-bottom: 30px;">छोटे बच्चों के लिए खूबसूरत इंग्लिश मीडियम स्कूल</p>
+            <div class="cta-buttons">
+                <a href="tel:7007178637" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i> Visit Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>8+</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="stat-item">
+                    <h3>25</h3>
+                    <p>Students Per Class</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Expert Teachers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1st</h3>
+                    <p>English Medium in District</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our School</h2>
+                <p>Building tomorrow's leaders with quality education</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/building-playground.jpg" alt="Yardland International School Building">
+                </div>
+                <div class="about-content">
+                    <h3>First English Medium School in the District</h3>
+                    <p>Welcome to Yardland International School, Chitrakoot's premier English medium educational institution. Established in 2016 by Director Shri Vijay Nigam, our school has been providing quality education with a perfect blend of modern teaching methods and traditional values.</p>
+                    <p>We believe every child is unique and deserves personalized attention. That's why we maintain a strict limit of only 25 students per class, ensuring each student receives the care and guidance they need to excel.</p>
+                    <p>Our school is affiliated with the MP State Board and offers education from Play Group to Class 8, focusing on holistic development of children.</p>
+                    
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>MP State Board Affiliated</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>English Medium</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Small Batch Size (25)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Experienced Faculty</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Play Group to Class 8</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Modern Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities" id="facilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Facilities</h2>
+                <p>World-class infrastructure for complete child development</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Large Playground</h3>
+                    <p>Spacious green playground with slides, swings, and see-saw for outdoor activities and physical development.</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Computer Lab</h3>
+                    <p>Modern computer lab equipped with latest systems for digital literacy and computer education.</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-smile"></i>
+                    <h3>Fun Yard</h3>
+                    <p>Dedicated fun zone with indoor games and activities for creative play and entertainment.</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Colorful Classrooms</h3>
+                    <p>Bright, vibrant classrooms with educational murals that make learning fun and engaging.</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-basketball-ball"></i>
+                    <h3>Indoor Sports</h3>
+                    <p>Indoor sports area with basketball and other games for all-weather physical activities.</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-pray"></i>
+                    <h3>Prayer Hall</h3>
+                    <p>Dedicated space for morning assembly and prayer to instill discipline and values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Yardland?</h2>
+                <p>What makes us different from others</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <i class="fas fa-user-friends"></i>
+                    <div>
+                        <h3>Personal Attention</h3>
+                        <p>With only 25 students per class, every child gets individual attention from teachers for better learning outcomes.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h3>First in District</h3>
+                        <p>Proud to be the first English medium school in Chitrakoot district, pioneering quality education since 2016.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-child"></i>
+                    <div>
+                        <h3>Child-Friendly Environment</h3>
+                        <p>Colorful classrooms, friendly teachers, and safe campus create a nurturing environment for young learners.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-book-reader"></i>
+                    <div>
+                        <h3>Holistic Development</h3>
+                        <p>Focus on academics, sports, arts, and values ensures complete development of every child.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <p>Glimpses of our school life</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/building-playground.jpg" alt="School Building with Playground">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/classroom-lkg.jpg" alt="LKG Classroom">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/classroom-pg.jpg" alt="Play Group Classroom">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/corridor.jpg" alt="School Corridor">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/playground-kids.jpg" alt="Children Playing">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/indoor-basketball.jpg" alt="Indoor Sports Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/event-republic-day.jpg" alt="Republic Day Celebration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission CTA -->
+    <section class="admission-cta">
+        <div class="container">
+            <h2>🎉 Admissions Open!</h2>
+            <p>Give your child the gift of quality education. Join the Yardland family today!</p>
+            <a href="tel:7007178637" class="btn">
+                <i class="fas fa-phone-alt"></i> Call for Admission: 7007178637
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Chitra Gokulpur, Chitrakoot<br>
+                            Landmark: UP-MP Border, Mandir ke Samne<br>
+                            Madhya Pradesh</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:7007178637">7007178637</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:yardland9936@gmail.com">yardland9936@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>School Hours</h4>
+                            <p>Monday - Saturday: 8:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Director</h4>
+                            <p>Shri Vijay Nigam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14441.876!2d81.0!3d25.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzAwLjAiTiA4McKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Yardland International School</strong></p>
+            <p>Chitra Gokulpur, Chitrakoot | Phone: 7007178637 | Email: yardland9936@gmail.com</p>
+            <p>© 2016 - 2026 Yardland International School. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/917007178637" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/917007178637?text=Hello%2C%20I%20want%20to%20know%20about%20admission%20in%20Yardland%20International%20School" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
