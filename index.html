@@ -300,7 +300,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
@@ -320,11 +320,6 @@
 
         .gallery-item:hover img {
             transform: scale(1.1);
-        }
-
-        .gallery-item:first-child {
-            grid-column: span 2;
-            grid-row: span 2;
         }
 
         /* Why Choose Us */
@@ -573,11 +568,6 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .gallery-item:first-child {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -794,10 +784,13 @@
                     <img src="images/building-poster.jpg" alt="School Building - Main Entrance">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/director-building.jpg" alt="School Building with Director">
+                    <img src="images/admission-poster.jpg" alt="Admission Open - प्रवेश प्रारंभ">
                 </div>
                 <div class="gallery-item">
                     <img src="images/building-playground.jpg" alt="School Building with Playground">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/director-building.jpg" alt="School Building with Director">
                 </div>
                 <div class="gallery-item">
                     <img src="images/classroom-lkg.jpg" alt="LKG Classroom">
@@ -822,9 +815,6 @@
                 </div>
                 <div class="gallery-item">
                     <img src="images/collage.jpg" alt="School Activities Collage">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/admission-poster.jpg" alt="Admission Open">
                 </div>
             </div>
         </div>
